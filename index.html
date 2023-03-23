@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>IMC-JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>IMC-(indice de massa corporal)</h1>
+        <div class="home">
+            <h2>Deseja ver seu IMC aperte no botão abaixo e sera redirecionado</h2>
+            <button class="btn btn-home">Começar</button>
+        </div>
+        <div class="form hide">
+            <h2>Preencha o formulário</h2>
+            <label>
+                <span>Peso:</span>
+                <input type="number" name="weight" id="weight" placeholder="Exemplo 60" required>
+            </label>
+            <label>
+                <span>Altura:</span>
+                <input type="text" id="height" placeholder="exemplo 1.75" required pattern="^[0-9]{1}.[0-9]{2}$">
+            </label>
+            <div class="actions">
+                <button class="btn btn-calc">
+                    Calcular
+                </button>
+                <button class="btn btn-vhome">
+                    Voltar
+                </button>
+            </div>
+        </div>
+        <div class="results hide">
+            <h2>Resultados</h2>
+            <p>
+                <span>Peso</span> <span class="rweight"></span>
+            </p>
+            <p>
+                <span>Altura</span> <span class="rheight"></span>
+            </p>
+            <p>
+                <span>IMC</span> <span class="rimc"></span>
+            </p>
+            <p>
+                <span>Situação</span> <span class="rsit"></span>
+            </p>
+            <button class="btn btn-vform">Voltar</button>
+        </div>
+    </div>
+</body>
+</html>
