@@ -52,6 +52,17 @@ const renderRes = (weight, height, imc, sit) => {
 };
 
 // events
+[weight, height].forEach((action) => {
+    action.addEventListener("input", () => {
+        if (weight.value.length >= 2 && height.value.length >= 4) {
+            btn_calc.removeAttribute("disabled");
+            return;
+        }
+
+        btn_calc.setAttribute("disabled", "");
+    });
+});
+
 btn_home.addEventListener("click", () => {
     home.classList.add("hide");
     form.classList.remove("hide");
@@ -77,6 +88,8 @@ btn_calc.addEventListener("click", () => {
 btn_vform.addEventListener("click", () => {
     weight.value = "";
     height.value = "";
+
+    btn_calc.setAttribute("disabled", "");
 
     form.classList.remove("hide");
     resusts.classList.add("hide");
